@@ -6,16 +6,16 @@
 int main() {
 	setlocale(LC_ALL, "rus");
 
-	double x, e, y_prev, y_curr;
+	double x1, e1, y_prev, y_curr;
 
 	// Ввод исходных данных
 	printf("Введите значение x: ");
-	scanf("%lf", &x);
+	scanf("%lf", &x1);
 	printf("Введите значение e: ");
-	scanf("%lf", &e);
+	scanf("%lf", &e1);
 
 	// Инициализация первого члена последовательности
-	y_prev = x; // Начальное значение
+	y_prev = x1; // Начальное значение
 	y_curr = 0;
 
 	int i = 1;
@@ -23,11 +23,11 @@ int main() {
 	// Условие завершения
 	do {
 		// Вычисление следующего члена последовательности
-		y_curr = 0.5 * (y_prev + (x / y_prev) - 1);
+		y_curr = 0.5 * (y_prev + (x1 / y_prev) - 1);
 
 		// Обновление предыдущего числа
 		i++;
-	} while (fabs(y_curr * y_curr - y_prev * y_prev) < e);
+	} while (fabs(y_curr * y_curr - y_prev * y_prev) < e1);
 	// Проверка условия завершения в while
 
 	// Вывод результата
